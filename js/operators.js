@@ -29,6 +29,13 @@ console.log(greetings()) // Howdy, stranger
 console.log(greetings(null)) // Howdy, stranger
 
 
+let test = take => { return take ? take.name : 'starnge' }
+
+console.log(test({ name: `sandy` })) //sandy
+console.log(test()) //starnge
+console.log(test(null)) //starnge
+
+
 /** Conditional chains
  * The ternary operator is right-associative, which means it can be "chained"
  * in the following way, similar to an if … else if … else if … else chain: */
@@ -131,3 +138,5 @@ function B() { console.log('called B'); return true; }
 console.log( A() && B() ); // false :- the AND operator short-circuits here and ignores function B
 
 /** Operator precedence */
+
+
